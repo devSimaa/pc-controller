@@ -55,6 +55,7 @@ async def start_command(message: types.Message):
     await message.delete()
 
 
+# ferfr
 @dp.message_handler(text="🖥 Сделать скриншот")
 async def screanshot_command(message: types.Message):
     screanshot.screen()
