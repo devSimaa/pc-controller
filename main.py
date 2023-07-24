@@ -18,7 +18,7 @@ dp = Dispatcher(
 
 async def start_up(_):
     find_screandhots()
-    print(" |<>| Бот запущен |<>| ")
+    print(" PC Controller-Bot | start ")
 
 
 # старт
