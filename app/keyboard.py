@@ -120,8 +120,13 @@ def dpi_ikb():
             ],
             [
                 InlineKeyboardButton(text="75", callback_data="d75"),
-                InlineKeyboardButton(text="115", callback_data="d115"),
-                InlineKeyboardButton(text="145", callback_data="d145"),
+                InlineKeyboardButton(text="105", callback_data="d105"),
+                InlineKeyboardButton(text="135", callback_data="d135"),
+            ],
+            [
+                InlineKeyboardButton(text="180", callback_data="d180"),
+                InlineKeyboardButton(text="225", callback_data="d225"),
+                InlineKeyboardButton(text="345", callback_data="d345"),
             ],
             [
                 InlineKeyboardButton(text="Назад", callback_data="connect"),

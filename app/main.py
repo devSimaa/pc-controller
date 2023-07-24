@@ -160,13 +160,14 @@ async def controler_x_y_callback(callback: types.CallbackQuery):
         await callback.answer(" Пока нету")
 
 
-@dp.callback_query_handler(text=["d5", "d15", "d45", "d75", "d115", "d145"])
+@dp.callback_query_handler(
+    text=["d5", "d15", "d45", "d75", "d105", "d135", "d180", "d225", "d345"]
+)
 async def edit_dpi_callback(callback: types.CallbackQuery):
     global dpi
     if callback.data == "d5":
         dpi = 5
         await callback.answer(f"Теперь dpi [{dpi}]")
-
     elif callback.data == "d15":
         dpi = 15
         await callback.answer(f"Теперь dpi [{dpi}]")
@@ -176,11 +177,20 @@ async def edit_dpi_callback(callback: types.CallbackQuery):
     elif callback.data == "d75":
         dpi = 75
         await callback.answer(f"Теперь dpi [{dpi}]")
-    elif callback.data == "d115":
-        dpi = 115
+    elif callback.data == "d105":
+        dpi = 105
         await callback.answer(f"Теперь dpi [{dpi}]")
-    elif callback.data == "d145":
-        dpi = 145
+    elif callback.data == "d135":
+        dpi = 135
+        await callback.answer(f"Теперь dpi [{dpi}]")
+    elif callback.data == "d180":
+        dpi = 180
+        await callback.answer(f"Теперь dpi [{dpi}]")
+    elif callback.data == "d225":
+        dpi = 225
+        await callback.answer(f"Теперь dpi [{dpi}]")
+    elif callback.data == "d345":
+        dpi = 345
         await callback.answer(f"Теперь dpi [{dpi}]")
 
 
