@@ -2,30 +2,35 @@ from aiogram import Bot, Dispatcher, executor, types
 from aiogram.utils.callback_data import CallbackData
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-# мои скрипты
-from config import token_api
-from controler import (
-    plus_dpi,
-    minus_dpi,
-    mouve_x_plus,
-    mouve_x_minus,
-    mouve_y_plus,
-    mouve_y_minus,
-    LKM,
-    PKM,
-)
-from keyboard import (
-    base_kb,
-    clicker_ikb,
-    screan_ikb,
-    volume_ikb,
-    controler_ikb,
-    dpi_ikb,
-    connect_ikb,
-)
+import app
+import config
 
-from create_folder import find_screandhots
-import screanshot
+# from data.config import token_api
+
+# # мои скрипты
+# # from config import token_api
+# from .other.controler import (
+#     plus_dpi,
+#     minus_dpi,
+#     mouve_x_plus,
+#     mouve_x_minus,
+#     mouve_y_plus,
+#     mouve_y_minus,
+#     LKM,
+#     PKM,
+# )
+# from .keyboard.keyboard import (
+#     base_kb,
+#     clicker_ikb,
+#     screan_ikb,
+#     volume_ikb,
+#     controler_ikb,
+#     dpi_ikb,
+#     connect_ikb,
+# )
+
+# from other.create_folder import find_screandhots
+# from other.screanshot import screen
 
 # import hashlib
 
