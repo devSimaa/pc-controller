@@ -31,7 +31,7 @@ async def start_command(message: types.Message):
     await message.delete()
 
 
-# ferfr
+# скриншот
 @dp.message_handler(text="🖥 Сделать скриншот")
 async def screanshot_command(message: types.Message):
     screanshot.screen()
@@ -43,7 +43,7 @@ async def screanshot_command(message: types.Message):
 
 @dp.callback_query_handler(text="Отправить скриншот")
 async def clicker_callback(callback: types.CallbackQuery):
-    path = f"./screanshots/{screanshot.random_name}"
+    path = f"{screanshot.path_screan}\{screanshot.random_name}"
     with open(path, "rb") as photo:
         await callback.bot.send_photo(
             chat_id=callback.message.chat.id,
@@ -172,11 +172,12 @@ async def edit_dpi_callback(callback: types.CallbackQuery):
 
 @dp.callback_query_handler(text=["Включение кликера", "Выключение кликера"])
 async def clicker_callback(callback: types.CallbackQuery):
-    global ggg
     if callback.data == "Включение кликера":
-        ggg = True
+        await callback.answer("Кликер включен")
+        setclicker(1)
     elif callback.data == "Выключение кликера":
-        ggg = False
+        await callback.answer("Кликер выключен")
+        setclicker(0)
 
 
 if __name__ == "__main__":
