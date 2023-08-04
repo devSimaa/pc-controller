@@ -51,14 +51,7 @@ async def clicker_callback(callback: types.CallbackQuery):
         )
 
 
-@dp.message_handler(text="♾ Кликер")
-async def clicker(message: types.Message):
-    await message.answer(
-        text=f"⚙️ Меню кликера",
-        reply_markup=clicker_ikb(),
-    )
-
-
+# микшер
 @dp.message_handler(text="🔊 Микшер громкости")
 async def сom_vmixer(message: types.Message):
     await message.answer(
@@ -67,7 +60,8 @@ async def сom_vmixer(message: types.Message):
     )
 
 
-@dp.message_handler(text="🕹 Контролер пк")
+# управление курсором
+@dp.message_handler(text="🕹 Управление курсором")
 async def com_controler(message: types.Message):
     await message.answer(
         text=f"Чтоб подключиться к контролеру, нужно нажать на кнопку.",
@@ -102,7 +96,6 @@ async def controler_x_y_callback(callback: types.CallbackQuery):
     elif callback.data == "c_left":
         mouve_x_minus(dpi)
         await callback.answer(" Лево")
-
     elif callback.data == "c_right":
         mouve_x_plus(dpi)
         await callback.answer(" Право")
@@ -141,43 +134,27 @@ async def controler_x_y_callback(callback: types.CallbackQuery):
 )
 async def edit_dpi_callback(callback: types.CallbackQuery):
     global dpi
-    if callback.data == "d5":
-        dpi = 5
-        await callback.answer(f"Теперь dpi [{dpi}]")
-    elif callback.data == "d15":
-        dpi = 15
-        await callback.answer(f"Теперь dpi [{dpi}]")
-    elif callback.data == "d45":
-        dpi = 45
-        await callback.answer(f"Теперь dpi [{dpi}]")
-    elif callback.data == "d75":
-        dpi = 75
-        await callback.answer(f"Теперь dpi [{dpi}]")
-    elif callback.data == "d105":
-        dpi = 105
-        await callback.answer(f"Теперь dpi [{dpi}]")
-    elif callback.data == "d135":
-        dpi = 135
-        await callback.answer(f"Теперь dpi [{dpi}]")
-    elif callback.data == "d180":
-        dpi = 180
-        await callback.answer(f"Теперь dpi [{dpi}]")
-    elif callback.data == "d225":
-        dpi = 225
-        await callback.answer(f"Теперь dpi [{dpi}]")
-    elif callback.data == "d345":
-        dpi = 345
-        await callback.answer(f"Теперь dpi [{dpi}]")
+    dpi = int(callback.data[1:])
+    await callback.answer(f"Теперь dpi [{dpi}]")
 
 
-@dp.callback_query_handler(text=["Включение кликера", "Выключение кликера"])
-async def clicker_callback(callback: types.CallbackQuery):
-    if callback.data == "Включение кликера":
-        await callback.answer("Кликер включен")
-        setclicker(1)
-    elif callback.data == "Выключение кликера":
-        await callback.answer("Кликер выключен")
-        setclicker(0)
+# кликер
+@dp.message_handler(text="♾ Кликер")
+async def clicker(message: types.Message):
+    await message.answer(
+        text=f"⚙️ Меню кликера",
+        reply_markup=clicker_ikb(),
+    )
+
+
+# @dp.callback_query_handler(text=["Включение кликера", "Выключение кликера"])
+# async def clicker_callback(callback: types.CallbackQuery):
+#     if callback.data == "Включение кликера":
+#         await callback.answer("Кликер включен")
+#         setclicker(1)
+#     elif callback.data == "Выключение кликера":
+#         await callback.answer("Кликер выключен")
+#         setclicker(0)
 
 
 if __name__ == "__main__":

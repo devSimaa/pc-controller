@@ -16,7 +16,7 @@ def base_kb():
                 KeyboardButton(text="🔊 Микшер громкости"),
             ],
             [
-                KeyboardButton(text="🕹 Контролер пк"),
+                KeyboardButton(text="🕹 Управление курсором"),
             ],
             [
                 KeyboardButton(text="♾ Кликер"),

@@ -1,4 +1,5 @@
 from pycaw.pycaw import AudioUtilities, ISimpleAudioVolume
+
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 
@@ -13,6 +14,4 @@ def set_volume(volume):
 
 
 # Изменение громкости на 50% (0.5) - можно указать другое значение от 0.0 до 1.0
-set_volume(
-    "                                                                                                                                                                                                                                                                                                                                                       "
-)
+set_volume(0.5)

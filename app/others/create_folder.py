@@ -2,14 +2,6 @@ import os
 from pathlib import Path
 
 
-# def find_screandhots():
-#     # path = rf"{os.getcwd()}\pc-controller"
-#     path = "."
-#     path = path + "\pc-controller"
-#     if not os.path.exists("screanshots"):
-#         os.mkdir(os.path.join(f"{path}", "screanshots"))
-
-
 def find_screandhots():
     folder_name = "screanshots"
     path = Path(".")

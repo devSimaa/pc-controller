@@ -1,10 +1,6 @@
 import pyautogui
 
 
-# currentMouseX, currentMouseY = pyautogui.position()
-
-
-# pyautogui.moveTo(10 + currentMouseX, currentMouseY)
 def PKM():
     pyautogui.rightClick()
 
