@@ -6,7 +6,7 @@ def find_screandhots():
     folder_name = "screanshots"
     path = Path(".")
 
-    # Поиск всех папок с заданным именем в текущей директории и её поддиректориях
+    # Поиск всех папок с заданным именем в текущей директории и её под директориях
     folders = [folder for folder in path.glob(f"**/{folder_name}") if folder.is_dir()]
 
     if not folders:
