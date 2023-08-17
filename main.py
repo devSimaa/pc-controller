@@ -89,15 +89,19 @@ async def controler_callback(callback: types.CallbackQuery):
 async def controler_x_y_callback(callback: types.CallbackQuery):
     if callback.data == "c_up":
         mouve_y_minus(dpi)
+
         await callback.answer(" Вверх")
     elif callback.data == "c_down":
         mouve_y_plus(dpi)
+
         await callback.answer(" Вниз")
     elif callback.data == "c_left":
         mouve_x_minus(dpi)
+
         await callback.answer(" Лево")
     elif callback.data == "c_right":
         mouve_x_plus(dpi)
+
         await callback.answer(" Право")
 
 
