@@ -1,2 +1,2 @@
-from .keyboard import *
+from .keyboards import *
 from .others import *
