@@ -1,5 +1,4 @@
 import mouse
-import keyboard
 import time
 
 
@@ -8,3 +7,12 @@ def setclicker(TaF):
         while True:
             mouse.click(button="left")
             time.sleep(1.11)
+
+
+def Cclicker(bool):
+    if bool == "on":
+        # while True:
+        mouse.click(button="left")
+        time.sleep(1.11)
+    else:
+        return

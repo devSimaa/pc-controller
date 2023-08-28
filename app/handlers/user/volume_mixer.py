@@ -1,6 +1,6 @@
 from aiogram import types, Dispatcher
 from loader import dp, bot
-from keyboards.inline_keyboard import volume_ikb
+from app.keyboards.inline_keyboard import volume_ikb
 
 
 # микшер

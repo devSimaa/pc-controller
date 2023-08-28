@@ -1,7 +1,7 @@
 from aiogram import types, Dispatcher
 from loader import dp, bot
-from others import screanshot
-from keyboards import screan_ikb
+from app.others import screanshot
+from app.keyboards import screan_ikb
 
 
 # скриншот

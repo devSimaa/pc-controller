@@ -1,7 +1,7 @@
 from aiogram import types, Dispatcher
 from loader import dp, bot
-from keyboards.inline_keyboard import *
-from others.controler import *
+from app.keyboards.inline_keyboard import connect_ikb, controler_ikb, dpi_ikb
+from app.others.controler import *
 
 dpi = 15
 

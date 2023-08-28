@@ -1,6 +1,6 @@
 from aiogram import types, Dispatcher
 from loader import dp, bot
-from keyboards import base_kb
+from app.keyboards import base_kb
 
 
 # старт

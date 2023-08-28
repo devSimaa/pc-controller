@@ -10,6 +10,3 @@ def screen():
     screenshot = pyautogui.screenshot()
     random_name = f"screenshot{random.randint(1, 20000)}.png"
     screenshot.save(f"{path_screan}\{random_name}")
-
-
-screen()

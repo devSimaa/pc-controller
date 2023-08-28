@@ -7,14 +7,6 @@ from config import *
 from loader import dp, bot
 
 
-# storage = MemoryStorage()
-# bot = Bot(token_api)
-# dp = Dispatcher(
-#     bot=bot,
-#     storage=storage,
-# )
-
-
 async def start_up(_):
     find_screandhots()
     print(" PC Controller-Bot | start ")

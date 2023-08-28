@@ -10,9 +10,10 @@ def clicker_ikb():
         resize_keyboard=True,
         inline_keyboard=[
             [
-                InlineKeyboardButton(text="Вкл", callback_data="Включение кликера"),
-                InlineKeyboardButton(text="Выкл", callback_data="Выключение кликера"),
+                InlineKeyboardButton(text="Вкл", callback_data="clicker_on"),
+                InlineKeyboardButton(text="Выкл", callback_data="clicker_off"),
             ],
+            [InlineKeyboardButton(text="Выйти", callback_data="clicker_exit")],
         ],
     )
     return ikb
