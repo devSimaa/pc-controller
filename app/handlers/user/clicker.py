@@ -7,6 +7,7 @@ from app.others.clicker import Cclicker
 
 
 class Clicker_State(StatesGroup):
+    menu = State()
     on = State()
     off = State()
 
@@ -14,33 +15,24 @@ class Clicker_State(StatesGroup):
 # кликер
 @dp.message_handler(text="♾ Кликер")
 async def clicker(message: types.Message):
+    await Clicker_State.first()
     await message.answer(
         text=f"⚙️ Меню кликера",
         reply_markup=clicker_ikb(),
     )
 
 
-@dp.callback_query_handler(text="clicker_on")
-async def on_clicker(callback: types.CallbackQuery):
+@dp.callback_query_handler(text="clicker_on", state=Clicker_State)
+async def on_clicker(callback: types.CallbackQuery, state=FSMContext):
     await callback.answer("Кликер включен")
 
     await Clicker_State.on.set()
-    # while True:
-    Cclicker("on")
+    while True:
+        Cclicker("on")
 
 
-@dp.callback_query_handler(text="clicker_off")
-async def off_clicker(callback: types.CallbackQuery):
+@dp.callback_query_handler(text="clicker_off", state=Clicker_State)
+async def off_clicker(callback: types.CallbackQuery, state=FSMContext):
     await callback.answer("Кликер выключен")
     await Clicker_State.off.set()
     Cclicker("off")
-
-
-# @dp.callback_query_handler(text=["Включение кликера", "Выключение кликера"])
-# async def clicker_callback(callback: types.CallbackQuery):
-#     if callback.data == "Включение кликера":
-#         await callback.answer("Кликер включен")
-#         setclicker(1)
-#     elif callback.data == "Выключение кликера":
-#         await callback.answer("Кликер выключен")
-#         setclicker(0)

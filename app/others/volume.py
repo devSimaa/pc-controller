@@ -7,7 +7,7 @@ from comtypes import CLSCTX_ALL
 def set_volume(volume):
     devices = AudioUtilities.GetSpeakers()
     interface = devices.Activate(
-        IAudioEndpointVolume.__iid__, comtypes.CLSCTX_ALL, None
+        # IAudioEndpointVolume.__iid__, comtypes.CLSCTX_ALL, None
     )
     volume_object = cast(interface, POINTER(ISimpleAudioVolume))
     volume_object.SetMasterVolume(volume, None)
