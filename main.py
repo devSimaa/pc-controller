@@ -1,18 +1,21 @@
-from aiogram import Bot, Dispatcher, executor, types
-from aiogram.utils.callback_data import CallbackData
-from aiogram.contrib.fsm_storage.memory import MemoryStorage
+from aiogram import Bot, Dispatcher, executor
+from app import middlewares, filters, handlers
 
-from app import middlewares, filtres, handlers
-from config import *
 from loader import dp, bot
-
+from app.others.create_folder import create_folder
+create_folder("screanshots")
+create_folder("snk")    
 
 async def start_up(_):
-    find_screandhots()
+
     print(" PC Controller-Bot | start ")
 
 
 if __name__ == "__main__":
+    create_folder("screanshots")
+    create_folder("lnk")    
+    
+
     executor.start_polling(
         dp,
         on_startup=start_up,

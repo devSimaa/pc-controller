@@ -15,10 +15,12 @@ async def screanshot_command(message: types.Message):
 
 
 @dp.callback_query_handler(text="Отправить скриншот")
-async def clicker_callback(callback: types.CallbackQuery):
+async def send_screanshot_callback(callback: types.CallbackQuery):
     path = f"{screanshot.path_screan}\{screanshot.random_name}"
     with open(path, "rb") as photo:
         await callback.bot.send_photo(
             chat_id=callback.message.chat.id,
             photo=photo,
         )
+
+

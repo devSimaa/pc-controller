@@ -13,6 +13,9 @@ def base_kb():
                 KeyboardButton(text="🖥 Сделать скриншот"),
             ],
             [
+                KeyboardButton(text="🗂 Приложения"),
+            ],
+            [
                 KeyboardButton(text="🔊 Микшер громкости"),
             ],
             [
