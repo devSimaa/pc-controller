@@ -4,6 +4,39 @@ from aiogram.types import (
     ReplyKeyboardRemove,
 )
 
+def cancel_state():
+    kb = ReplyKeyboardMarkup(
+        resize_keyboard=True,
+        keyboard=[
+            [
+                KeyboardButton(text="Выйти")
+            ],
+        ],
+    )
+    return kb
+
+# def base_kb():
+#     kb = ReplyKeyboardMarkup(
+#         resize_keyboard=True,
+#         keyboard=[
+#             [
+#                 KeyboardButton(text="🖥 Сделать скриншот"),
+#             ],
+#             [
+#                 KeyboardButton(text="🗂 Приложения"),
+#             ],
+#             [
+#                 KeyboardButton(text="🔊 Микшер громкости"),
+#             ],
+#             [
+#                 KeyboardButton(text="🕹 Управление курсором"),
+#             ],
+#             [
+#                 KeyboardButton(text="♾ Кликер"),
+#             ],
+#         ],
+#     )
+#     return kb
 
 def base_kb():
     kb = ReplyKeyboardMarkup(
@@ -11,17 +44,16 @@ def base_kb():
         keyboard=[
             [
                 KeyboardButton(text="🖥 Сделать скриншот"),
+                KeyboardButton(text="🔊 Микшер громкости")
+
+
             ],
             [
                 KeyboardButton(text="🗂 Приложения"),
-            ],
-            [
-                KeyboardButton(text="🔊 Микшер громкости"),
+                KeyboardButton(text="🗂 Поиск")
             ],
             [
                 KeyboardButton(text="🕹 Управление курсором"),
-            ],
-            [
                 KeyboardButton(text="♾ Кликер"),
             ],
         ],
