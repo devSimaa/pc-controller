@@ -3,18 +3,14 @@ from app import middlewares, filters, handlers
 
 from loader import dp, bot
 from app.others.create_folder import create_folder
-create_folder("screanshots")
-create_folder("snk")    
 
 async def start_up(_):
-
     print(" PC Controller-Bot | start ")
 
 
 if __name__ == "__main__":
     create_folder("screanshots")
-    create_folder("lnk")    
-    
+    create_folder("lnk")
 
     executor.start_polling(
         dp,

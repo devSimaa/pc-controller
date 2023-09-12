@@ -1,8 +1,10 @@
 from aiogram import types, Dispatcher
 from loader import dp, bot
+
 from aiogram.dispatcher.filters.state import StatesGroup, State
 from aiogram.dispatcher import FSMContext
-from app.keyboards import clicker_ikb
+
+from app.keyboards.inline_keyboard import clicker_ikb
 from app.others.clicker import Cclicker
 
 

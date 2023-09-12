@@ -1,8 +1,8 @@
-from . import clicker
-from . import controler
-from . import create_folder
-from . import screanshot
-from . import lnk_control
+from .clicker import *
+from .controler import *
+from .create_folder import *
+from .screanshot import *
+from .lnk_control import *
 # from . import volume
 
 

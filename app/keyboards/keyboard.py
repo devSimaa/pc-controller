@@ -15,28 +15,6 @@ def cancel_state():
     )
     return kb
 
-# def base_kb():
-#     kb = ReplyKeyboardMarkup(
-#         resize_keyboard=True,
-#         keyboard=[
-#             [
-#                 KeyboardButton(text="🖥 Сделать скриншот"),
-#             ],
-#             [
-#                 KeyboardButton(text="🗂 Приложения"),
-#             ],
-#             [
-#                 KeyboardButton(text="🔊 Микшер громкости"),
-#             ],
-#             [
-#                 KeyboardButton(text="🕹 Управление курсором"),
-#             ],
-#             [
-#                 KeyboardButton(text="♾ Кликер"),
-#             ],
-#         ],
-#     )
-#     return kb
 
 def base_kb():
     kb = ReplyKeyboardMarkup(

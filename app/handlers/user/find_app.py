@@ -4,7 +4,7 @@ from aiogram.dispatcher import FSMContext
 
 from loader import dp, bot
 from app.keyboards.keyboard import cancel_state
-from windowsapps import open_app, find_app, get_apps
+from windowsapps import open_app
 
 class AppSearch(StatesGroup):
     search = State()
