@@ -3,7 +3,7 @@ from pathlib import Path
 
 def get_file_list():
     path = Path.cwd()
-
+    
 
     file_list = []
     for item in path.iterdir():

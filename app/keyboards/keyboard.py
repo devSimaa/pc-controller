@@ -32,7 +32,7 @@ def base_kb():
             ],
             [
                 KeyboardButton(text="🕹 Управление курсором"),
-                KeyboardButton(text="♾ Кликер"),
+                # KeyboardButton(text="♾ Кликер"),
             ],
         ],
     )
