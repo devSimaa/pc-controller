@@ -7,7 +7,6 @@ from .screanshot import dp
 from .volume_mixer import dp
 from .app import dp
 from .find_app import dp
-
-
+from .explorer import dp
 
 __all__ = ["dp"]

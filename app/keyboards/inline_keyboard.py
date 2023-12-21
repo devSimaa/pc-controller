@@ -18,6 +18,13 @@ def clicker_ikb():
     )
     return ikb
 
+async def explorer_listdir(listdir):
+    ikb = InlineKeyboardMarkup()
+    for i in listdir:
+        ikb.add(InlineKeyboardButton(text=i, callback_data=f"{i}_file"))
+    ikb.add(InlineKeyboardButton(text="◀️ back", callback_data=f"explorer_back"))
+    return ikb
+
 
 def screan_ikb():
     ikb = InlineKeyboardMarkup(
